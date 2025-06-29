@@ -1,0 +1,135 @@
+/* static/css/style.css */
+
+/* General Body Styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+/* Main Container */
+.container {
+    max-width: 800px;
+    width: 100%;
+    margin: auto;
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #1c1e21;
+    margin-bottom: 1.5rem;
+}
+
+p {
+    color: #606770;
+    line-height: 1.6;
+}
+
+/* Navigation Links */
+nav, .nav-link {
+    margin-top: 2rem;
+}
+
+a {
+    color: #1877f2;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #166fe5;
+}
+
+/* Form Styles */
+form {
+    text-align: left;
+    margin-top: 2rem;
+}
+
+label {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #606770;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #1877f2;
+    box-shadow: 0 0 0 2px rgba(24, 119, 242, 0.2);
+}
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 0.85rem;
+    margin-top: 2rem;
+    background-color: #1877f2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #166fe5;
+}
+
+/* Submissions Display */
+.submission {
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    background-color: #f8f9fa;
+    text-align: left;
+    opacity: 0; /* Initially hidden for JS animation */
+    transform: translateY(20px); /* Start slightly lower */
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.submission p {
+    margin: 0.5rem 0;
+}
+
+.submission .meta {
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
